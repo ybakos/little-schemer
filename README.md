@@ -23,11 +23,11 @@ This chapter introduces the style of the book and some preliminary questions and
 
 * Law of eq? (p12)
 
-  eq? takes two arguments, each must be non-numeric atom (not true actually)
+  `eq?` takes two arguments, each must be non-numeric atom (not true actually)
 
 
 ## Chapter 2: Do It, Do It Again, and Again, and Again...
-This chapter introduces recursion through the exploration of `lat?` (_l_ist _o_f _a_toms) and `member?` applications. It walks the reader through the descent of the recursive call chain and bubbling back up the answer to the original call.
+This chapter introduces recursion through the exploration of `lat?` (list of atoms) and `member?` applications. It walks the reader through the descent of the recursive call chain and bubbling back up the answer to the original call.
 
 ## Chapter 3: Cons the Magnificent
 `#TODO
