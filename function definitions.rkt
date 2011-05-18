@@ -108,3 +108,18 @@
       ((null? lat) '())
       ((eq? (car lat) a) (multirember a (cdr lat)))
       (else (cons (car lat) (multirember a (cdr lat)))))))
+
+;;; Inserts the atom new to the right of all occurences of old in list lat.
+(define multiinsertR
+  (lambda (new old lat)
+    (cond
+      ((null? lat) '())
+      (else
+        (cond
+          ((eq? (car lat) old) (cons old (cons new (multiinsertR new old (cdr lat)))))
+          (else (cons (car lat) (multiinsertR new old (cdr lat))))
+        )
+      )
+    )
+  )
+)
