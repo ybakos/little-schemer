@@ -71,7 +71,7 @@
   )
 )
 
-;;; Replaces the first occurance of old in lat with new.
+;;; Replaces the first occurrence of old in lat with new.
 (define subst
   (lambda (new old lat)
     (cond
@@ -86,7 +86,7 @@
   )
 )
 
-;;; Replaces the first occurance of old in lat with new.
+;;; Replaces the first occurrence of o1 or o2 in lat with new.
 (define subst2
   (lambda (new o1 o2 lat)
     (cond
@@ -100,3 +100,11 @@
     )
   )
 )
+
+;;; Remove all occurrences of a from list lat
+(define multirember
+  (lambda (a lat)
+    (cond
+      ((null? lat) '())
+      ((eq? (car lat) a) (multirember a (cdr lat)))
+      (else (cons (car lat) (multirember a (cdr lat)))))))
