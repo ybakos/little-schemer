@@ -29,5 +29,23 @@ This chapter introduces the style of the book and some preliminary questions and
 ## Chapter 2: Do It, Do It Again, and Again, and Again...
 This chapter introduces recursion through the exploration of `lat?` (list of atoms) and `member?` applications. It walks the reader through the descent of the recursive call chain and bubbling back up the answer to the original call.
 
+* The first commandment (preliminary) (p23)
+
+  Always ask `null?` as the first question in expressing any function.
+
+
 ## Chapter 3: Cons the Magnificent
-`#TODO
+Introduces list creation with cons, first via the `rember` function. Then proposes the `firsts` function and prompts the reader to attempt to write it.
+
+* The second commandment (p37)
+
+  Use `cons` to build lists.
+
+* The third commandment (p45)
+
+  When building al list, describe the first typical element, and then `cons` it onto the natural recursion.
+
+* The fourth commandment (preliminary) (p57)
+
+  Always change at least one argument while recurring. It must be changed to be closer to termination. The changing argument must be tested in the termination condition: when using `cdr`, test termination with `null?`
+
