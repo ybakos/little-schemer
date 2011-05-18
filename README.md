@@ -36,6 +36,7 @@ This chapter introduces recursion through the exploration of `lat?` (list of ato
 
 ## Chapter 3: Cons the Magnificent
 Introduces list creation with cons, first via the `rember` function. Then proposes the `firsts` function and prompts the reader to attempt to write it.
+There are lots of function implementation exercises at the end of this chapter for `subst`, `insertR`, `insertL` and `multi*` versions of each of those functions.
 
 * The second commandment (p37)
 
@@ -49,3 +50,4 @@ Introduces list creation with cons, first via the `rember` function. Then propos
 
   Always change at least one argument while recurring. It must be changed to be closer to termination. The changing argument must be tested in the termination condition: when using `cdr`, test termination with `null?`
 
+## Chapter 4: Numbers Games
