@@ -51,4 +51,12 @@ There are lots of function implementation exercises at the end of this chapter f
   Always change at least one argument while recurring. It must be changed to be closer to termination. The changing argument must be tested in the termination condition: when using `cdr`, test termination with `null?`
 
 ## Chapter 4: Numbers Games
-Introduces built-in functions _add1_, _sub1_ and _zero?_. Prompts the reader to implement _+_ and _-_ recursively using just _add1_, _sub1_ and _zero?_. Uses this to draw similarities between _null?_ and _zero?_; and _cons_ and _add1_. Introduces the concept of tuples through the imaginary _tup?_ function.
+Introduces built-in functions `add1`, `sub1` and `zero?`. Prompts the reader to implement `+` and `-` recursively using just `add1`, `sub1` and `zero?`. Uses this to draw similarities between `null?` and `zero?`; and `cons` and `add1`. Introduces the concept of tuples through the imaginary `tup?` function. Prompts the user to implement `addtup`.
+
+* The first commandment (first revision) (p64)
+
+  When recurring on a list of atoms _lat_, ask two questions about it: `(null? lat)` and `else`. When recurring on a number, _n_, ask two questions about it: `(zero? n)` and `else`.
+
+* The fourth commandment (first revision) (p65)
+
+  Always change at least one argument while recurring. It must be changed to be closer to termination. The changing argumnet must be tested in the termination condition: when using `cdr`, test termination with `null?` and when using `sub1` test termination with `zero?`.

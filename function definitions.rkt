@@ -153,3 +153,13 @@
     )
   )
 )
+
+;;; Returns the sum of all the atoms in a tuple.
+(define addtup
+  (lambda (tup)
+    (cond
+      ((null? tup) '0)
+      (else (+ (car tup) (addtup (cdr tup))))
+    )
+  )
+)
