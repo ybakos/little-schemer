@@ -51,3 +51,4 @@ There are lots of function implementation exercises at the end of this chapter f
   Always change at least one argument while recurring. It must be changed to be closer to termination. The changing argument must be tested in the termination condition: when using `cdr`, test termination with `null?`
 
 ## Chapter 4: Numbers Games
+Introduces built-in functions _add1_, _sub1_ and _zero?_. Prompts the reader to implement _+_ and _-_ recursively using just _add1_, _sub1_ and _zero?_. Uses this to draw similarities between _null?_ and _zero?_; and _cons_ and _add1_. Introduces the concept of tuples through the imaginary _tup?_ function.
