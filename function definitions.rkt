@@ -163,3 +163,15 @@
     )
   )
 )
+
+;;; Returns a list of the sum of each pair of atoms in two tuples
+(define tup+
+  (lambda (tup1 tup2)
+    (cond
+      ((and (null? tup1) (null? tup2)) '())
+      (else
+        (cons (+ (car tup1) (car tup2)) (tup+ (cdr tup1) (cdr tup2)))
+      )
+    )
+  )
+)

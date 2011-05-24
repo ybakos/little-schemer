@@ -60,3 +60,8 @@ Introduces built-in functions `add1`, `sub1` and `zero?`. Prompts the reader to 
 * The fourth commandment (first revision) (p65)
 
   Always change at least one argument while recurring. It must be changed to be closer to termination. The changing argumnet must be tested in the termination condition: when using `cdr`, test termination with `null?` and when using `sub1` test termination with `zero?`.
+
+  * The fifth commandment
+
+    When building a value with `+`, always use 0 for the value of the terminating line, for adding 0 does not change the value of an addition. When building a value with `*`, always use 1 for the value of the terminating line, for multiplying by 1 does not change the value of a multiplication. When building a value with `cons`, always consider () for the value of the terminating line.
+
