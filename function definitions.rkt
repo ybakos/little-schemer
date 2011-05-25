@@ -217,3 +217,25 @@
     )
   )
 )
+
+;;; Returns only the numeric atoms in a list.
+(define all-nums
+  (lambda (lat)
+    (cond
+      ((null? lat) '())
+      ((number? (car lat)) (cons (car lat) (all-nums (cdr lat))))
+      (else (all-nums (cdr lat)))
+    )
+  )
+)
+
+;;; Returns true if both atoms are equal.
+(define eqan?
+  (lambda (a b)
+    (cond
+      ((and (number? a) (number? b)) (= a b) )
+      ((or (number? a) (number? b)) #f)
+      (else (eq? a b))
+    )
+  )
+)
