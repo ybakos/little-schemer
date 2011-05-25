@@ -164,7 +164,7 @@
   )
 )
 
-;;; Returns a list of the sum of each pair of atoms in two tuples
+;;; Returns a list of the sum of each pair of atoms in two tuples.
 (define tup+
   (lambda (tup1 tup2)
     (cond
@@ -173,6 +173,47 @@
       (else
         (cons (+ (car tup1) (car tup2)) (tup+ (cdr tup1) (cdr tup2)))
       )
+    )
+  )
+)
+
+;;; Returns the number of atoms in a list.
+(define length
+  (lambda (lat)
+    (cond
+      ((null? lat) 0)
+      (else (add1 (length (cdr lat))))
+    )
+  )
+)
+
+;;; Returns the nth atom of a list.
+(define pick
+  (lambda (n lat)
+    (cond
+      ((zero? (sub1 n)) (car lat))
+      (else (pick (sub1 n) (cdr lat)))
+    )
+  )
+)
+
+;;; Removes the nth atom from a list.
+(define rempick
+  (lambda (n lat)
+    (cond
+      ((zero? (sub1 n)) (cdr lat))
+      (else (cons (car lat) (rempick (sub1 n) (cdr lat))))
+    )
+  )
+)
+
+;;; Returns the provided list sans numbers.
+(define no-nums
+  (lambda (lat)
+    (cond
+      ((null? lat) '())
+      ((number? (car lat)) (no-nums (cdr lat)))
+      (else (cons (car lat) (no-nums (cdr lat))))
     )
   )
 )
