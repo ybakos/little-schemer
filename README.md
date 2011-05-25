@@ -51,7 +51,7 @@ There are lots of function implementation exercises at the end of this chapter f
   Always change at least one argument while recurring. It must be changed to be closer to termination. The changing argument must be tested in the termination condition: when using `cdr`, test termination with `null?`
 
 ## Chapter 4: Numbers Games
-Introduces built-in functions `add1`, `sub1` and `zero?`. Prompts the reader to implement `+` and `-` recursively using just `add1`, `sub1` and `zero?`. Uses this to draw similarities between `null?` and `zero?`; and `cons` and `add1`. Introduces the concept of tuples through the imaginary `tup?` function. Prompts the reader to implement `addtup`. Walks the reader through a recursive `*` function. Prompts the reader to implement `tup+` for tuples of identical and differing lengths.
+Introduces built-in functions `add1`, `sub1` and `zero?`. Prompts the reader to implement `+` and `-` recursively using just `add1`, `sub1` and `zero?`. Uses this to draw similarities between `null?` and `zero?`; and `cons` and `add1`. Introduces the concept of tuples through the imaginary `tup?` function. Prompts the reader to implement `addtup`. Walks the reader through a recursive `*` function. Prompts the reader to implement `tup+` for tuples of identical and differing lengths. Walks the reader through recursive implementations of `<`, `>`, and `/` or `quotient`. Lastly, encourages the reader to implement recursive definitions of `length`, `pick`, `rempick`, `no-nums`, `all-nums`, `eqan?`, `occur`, `one?` and a rewrite of `rempick`.
 
 
 
@@ -63,7 +63,7 @@ Introduces built-in functions `add1`, `sub1` and `zero?`. Prompts the reader to 
 
   Always change at least one argument while recurring. It must be changed to be closer to termination. The changing argumnet must be tested in the termination condition: when using `cdr`, test termination with `null?` and when using `sub1` test termination with `zero?`.
 
-  * The fifth commandment
+  * The fifth commandment (p67)
 
-    When building a value with `+`, always use 0 for the value of the terminating line, for adding 0 does not change the value of an addition. When building a value with `*`, always use 1 for the value of the terminating line, for multiplying by 1 does not change the value of a multiplication. When building a value with `cons`, always consider () for the value of the terminating line.
+  When building a value with `+`, always use 0 for the value of the terminating line, for adding 0 does not change the value of an addition. When building a value with `*`, always use 1 for the value of the terminating line, for multiplying by 1 does not change the value of a multiplication. When building a value with `cons`, always consider () for the value of the terminating line.
 

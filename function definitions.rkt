@@ -250,3 +250,23 @@
     )
   )
 )
+
+;;; Returns true if the argument is the value 1.
+(define one?
+  (lambda (n)
+    (cond
+      ((zero? n) #f)
+      (else (zero? (sub1 n)))
+    )
+  )
+)
+
+;;; A version of rempick using one?
+(define rempick
+  (lambda (n lat)
+    (cond
+      ((one? n) (cdr lat))
+      (else (cons (car lat) (rempick (sub1 n) (cdr lat))))
+    )
+  )
+)
